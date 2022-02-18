@@ -7,7 +7,7 @@ import { FloorComponent } from './floor/floor.component';
 
 const routes: Routes = [
   {path: 'floor', component: FloorComponent},
-  {path: 'home', component:HomeComponent},
+  {path: '', component:HomeComponent},
   {path:'department', component:DepartmentComponent}
 ]
 

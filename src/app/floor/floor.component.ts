@@ -1,26 +1,30 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, TemplateRef } from '@angular/core';
-import { BsModalRef, BsModalService, ModalModule } from 'ngx-bootstrap/modal';
+import { Component, Injectable, OnInit, TemplateRef } from '@angular/core';
+import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { Inject } from '@angular/core';
 
+@Injectable({
+  providedIn: 'root'
+})
 @Component({
   selector: 'app-floor',
   templateUrl: './floor.component.html',
-  styleUrls: ['./floor.component.css']
+  styleUrls: ['./floor.component.css'],
+
 })
 export class FloorComponent implements OnInit {
 
-  modalRef: BsModalRef;
+  modalRef: NgbModal;
 
-  constructor(
-    // private httpClient: HttpClient,
-       private modalService: BsModalService
+  constructor(@Inject(NgbModal)
+    private modalService: NgbModal
     ) { }
 
   ngOnInit(): void {
   }
 
   openModal(template: TemplateRef<any>){
-      this.modalRef = this.modalService.show(template, {backdrop:'static'});
+       this.modalRef = this.modalService.show(template, {backdrop:'static'});
   }
 
 }
