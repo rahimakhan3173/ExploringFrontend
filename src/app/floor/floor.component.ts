@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Injectable, OnInit, TemplateRef } from '@angular/core';
-import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { Component, Injectable, OnInit, TemplateRef, NgModule } from '@angular/core';
+// import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import { Inject } from '@angular/core';
+import { BsModalRef, BsModalService , NgbModal} from 'ngx-bootstrap/modal';
 
 @Injectable({
   providedIn: 'root'
