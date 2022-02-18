@@ -1,0 +1,15 @@
+<p>floor works!</p>
+<button (click)="openModal(floorModalTemplate)">click me</button>
+
+<ng-template #floorModalTemplate>
+  <div class="modal-header">
+    <h4>Floor</h4>
+  </div>
+
+  <div class="modal-body">
+    <fieldset>
+      <label for="id">ID</label>
+      <input type="text" placeholder="ID">
+    </fieldset>
+  </div>
+</ng-template>
